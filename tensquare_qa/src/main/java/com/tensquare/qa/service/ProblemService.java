@@ -11,8 +11,10 @@ import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import javax.persistence.criteria.Selection;
+import javax.servlet.http.HttpServletRequest;
 import javax.transaction.Transactional;
 
+import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -25,6 +27,7 @@ import util.IdWorker;
 
 import com.tensquare.qa.dao.ProblemDao;
 import com.tensquare.qa.pojo.Problem;
+import util.JwtUtil;
 
 /**
  * 服务层
