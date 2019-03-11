@@ -23,6 +23,8 @@ import entity.Result;
 import entity.StatusCode;
 import util.JwtUtil;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * 控制器层
  * @author Administrator
@@ -39,6 +41,16 @@ public class UserController {
     private RedisTemplate redisTemplate;
 	@Autowired
     private JwtUtil jwtUtil;
+    @Autowired
+    private HttpServletRequest request;
+
+    /**
+     * 更新粉丝数和关注数，这个方法是用来给feign客户端使用，所以不用返回值也可以
+     */
+    @RequestMapping(value = "/{userid}/{friendid}/{x}",method = RequestMethod.PUT)
+    public void updateFansAndFollowCount(@PathVariable String userid,@PathVariable String friendid,@PathVariable int x){
+        userService.updateFansAndFollowCount(x,userid,friendid);
+    }
 
 
     /**
@@ -102,7 +114,9 @@ public class UserController {
 	 */
 	@RequestMapping(method= RequestMethod.GET)
 	public Result findAll(){
-		return new Result(true,StatusCode.OK,"查询成功",userService.findAll());
+        String header = request.getHeader("Authorization");
+        System.out.println("user中通过网关获取到头信息 " + header);
+        return new Result(true,StatusCode.OK,"查询成功",userService.findAll());
 	}
 	
 	/**

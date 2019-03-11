@@ -2,10 +2,12 @@ package com.tensquare.gathering;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import util.IdWorker;
 @SpringBootApplication
 @EnableCaching    //这个注解表示开启使用springboot的缓存注解
+@EnableEurekaClient
 public class GatheringApplication {
 
 	public static void main(String[] args) {

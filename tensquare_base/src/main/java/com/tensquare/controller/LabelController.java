@@ -8,12 +8,14 @@ import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.List;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/label")
+@RequestScope //这个注解可以使用spring-cloud-bus中个更新配置文件中自定义的属性，也可以直接更新内容，否则bus只能更新框架中的属性
 public class LabelController {
 
     @Autowired
