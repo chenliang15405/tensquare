@@ -25,6 +25,7 @@
         <module>tensquare_config</module>
         <module>tensquare_article_crawler</module>
         <module>tensquare_user_crawler</module>
+        <module>tensquare_ai</module>
     </modules>
     <packaging>pom</packaging>
 

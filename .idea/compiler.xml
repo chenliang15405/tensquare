@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="tensquare_ai" />
         <module name="tensquare_article" />
         <module name="tensquare_article_crawler" />
         <module name="tensquare_base" />

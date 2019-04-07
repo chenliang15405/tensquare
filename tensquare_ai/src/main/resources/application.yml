@@ -1,0 +1,13 @@
+server:
+  port: 9016
+
+ai:
+  #合并之后的分词语料库
+  wordLib: E:\360用户文件\AI\article.txt
+  dataPath: E:\360用户文件\data
+
+  #定义词向量模型
+  vecModel: E:\360用户文件\AI\article.vecmodel
+
+  #卷积神经网络模型  CNN
+  cnnModel: E:\360用户文件\AI\article.cnnmodel

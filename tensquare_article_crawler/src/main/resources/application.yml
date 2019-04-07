@@ -13,3 +13,5 @@ spring:
     show-sql: true
   redis:
     host: 132.232.104.247
+ai:
+  dataPath: E:\360用户文件\data\
