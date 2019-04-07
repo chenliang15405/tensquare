@@ -10,10 +10,10 @@ import util.IdWorker;
 
 @SpringBootApplication
 @EnableScheduling
-public class ArticleCarwlerApplication {
+public class UserCrawlerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ArticleCarwlerApplication.class,args);
+        SpringApplication.run(UserCrawlerApplication.class,args);
     }
 
     @Value("${spring.redis.host}")

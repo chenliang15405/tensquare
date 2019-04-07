@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="tensquare_article" />
+        <module name="tensquare_article_crawler" />
         <module name="tensquare_base" />
         <module name="tensquare_common" />
         <module name="tensquare_config" />
@@ -20,6 +21,7 @@
         <module name="tensquare_sms" />
         <module name="tensquare_spit" />
         <module name="tensquare_user" />
+        <module name="tensquare_user_crawler" />
         <module name="tensquare_web" />
       </profile>
     </annotationProcessing>
